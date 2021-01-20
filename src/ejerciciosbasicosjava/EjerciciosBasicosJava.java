@@ -70,6 +70,19 @@ public class EjerciciosBasicosJava {
         return true;
     }
     
+    public boolean menosPor10 (int a, int b, int c){
+        if (a == b - 10 || a == c - 10){
+            return true;
+        }
+        if (b == a - 10 || b == c - 10){
+            return true;
+        }
+        if (c == a - 10 || c == b - 10){
+            return true;
+        }
+        return false;
+    }
+    
     
     /**
      * @param args the command line arguments
@@ -98,6 +111,12 @@ public class EjerciciosBasicosJava {
         System.out.println(ejercicio.contesta(false, false, false));
         System.out.println(ejercicio.contesta(false, false, true));
         System.out.println(ejercicio.contesta(true, false, false));
+        
+        
+        System.out.println("Ejercicio 05 menosPor10:");
+        System.out.println(ejercicio.menosPor10(1, 7, 11));
+        System.out.println(ejercicio.menosPor10(1, 7, 10));
+        System.out.println(ejercicio.menosPor10(11, 1, 7));
     }
     
 }
