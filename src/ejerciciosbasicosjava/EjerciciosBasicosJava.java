@@ -24,6 +24,8 @@ public class EjerciciosBasicosJava {
         return false;
     }
     
+    
+    
     /**
      * multa: Si    la    velocidad    es    de    60    o    menos,    el    resultado    es    0    Si    la    velocidad    es    de    entre    61    y    80    inclusive,    el    resultado    es    1    Si    la    velocidad    es    81    o    más,    el    resultado    es    2  
      * 
@@ -44,6 +46,17 @@ public class EjerciciosBasicosJava {
         //en cualquier otro valor que tuviera la velocidad devolvemos la multa grande
         return 2;
     }
+    /**
+     * @param numero    el numero a evaluar si es o no vanidoso. Es vanidoso si
+     * es multiplo de 11 o uno más de un múltiplo de 11
+    */  
+    public boolean muyVanidoso(int numero){
+       if (numero % 11 < 2){ //si la división da como resto cero o uno
+           return true;
+       }
+        return false;
+    }
+    
     
     /**
      * @param args the command line arguments
@@ -61,6 +74,11 @@ public class EjerciciosBasicosJava {
         System.out.println(ejercicio.multa(65, false));
         System.out.println(ejercicio.multa(65, true));
         
+        
+        System.out.println("Ejercicio 03 muy vanidoso:");
+        System.out.println(ejercicio.muyVanidoso(22));
+        System.out.println(ejercicio.muyVanidoso(23));
+        System.out.println(ejercicio.muyVanidoso(24));
     }
     
 }
